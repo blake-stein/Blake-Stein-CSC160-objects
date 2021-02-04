@@ -6,6 +6,8 @@
 WeatherReport::WeatherReport(string location) {
   this->location = location;
   this->temperature = FILL_VALUE;
+  this->windSpeed = FILL_VALUE;
+ 
 }
 
 WeatherReport::~WeatherReport() {
@@ -14,9 +16,15 @@ WeatherReport::~WeatherReport() {
 void WeatherReport::setTemperature(double temperature) {
   this->temperature = temperature;
 }
+void WeatherReport::setWindSpeed(double windSpeed) {
+  this->windSpeed = windSpeed;
+}
 
 double WeatherReport::getTemperature() {
   return this->temperature;
+}
+double WeatherReport::getWindSpeed() {
+  return this->windSpeed;
 }
 
 string WeatherReport::getLocation() {
